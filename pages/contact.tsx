@@ -1,11 +1,10 @@
 import Link from "next/link";
-import styles from "../components/css/about.module.scss";
 import Layout from "../components/Layout";
-const About = () => {
+const Contact = () => {
   return (
     <Layout>
-      <section className={styles.inner}>
-        <h2>about</h2>
+      <section>
+        <h2>Contact</h2>
         <p>coming soon...</p>
         <Link href="/">
           <a>back to home</a>
@@ -15,4 +14,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;
