@@ -38,3 +38,42 @@ li {
   margin: 0;
   padding: 0;
 }
+
+main {
+  &.notfound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1090px;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0 auto;
+    section {
+      text-align: center;
+      
+      h1 {
+        font-size: 18px;
+        font-weight: bold;
+
+        span {
+          position: relative;
+          padding-right: 20px;
+
+          &::after {
+            position: absolute;
+            display: inline-block;
+            content: "";
+            width: 2px;
+            height: 20px;
+            top: 50%;
+            right: 12px;
+            margin-top: -10px;
+
+            background-color: #ffb451;
+          }
+        }
+      }
+    }
+  }
+}

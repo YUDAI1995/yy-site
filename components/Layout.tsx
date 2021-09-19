@@ -9,31 +9,34 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.contents}>
-        <ul className={styles.grobalmenu}>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/message">Mesaage</Link>{" "}
-          </li>
-          <li>
-            <Link href="/works">Works</Link>
-          </li>
-          <li>
-            <Link href="/info">Info</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-        <div className={styles.view}>{children}</div>
-      </div>
-
+    <>
+      <main>
+        <div className={styles.container}>
+          <div className={styles.contents}>
+            <ul className={styles.grobalmenu}>
+              <li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/message">Mesaage</Link>{" "}
+              </li>
+              <li>
+                <Link href="/works">Works</Link>
+              </li>
+              <li>
+                <Link href="/info">Info</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+            <div className={styles.view}>{children}</div>
+          </div>
+        </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

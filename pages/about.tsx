@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const About = () => {
   return (
     <Layout>
-      <section className={styles.inner}>
+      <section>
         <h2>about</h2>
         <p>coming soon...</p>
         <Link href="/">
