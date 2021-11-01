@@ -1,24 +1,24 @@
-import Link from "next/link";
 import Head from "next/head";
-import Layout from "../components/Layout";
+import Layout from "../components/Layout/Layout";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Welcome!</title>
-        <meta name="description" content="This is my site." />
+        <title>Yudai Yamamoto</title>
+        <meta
+          name="description"
+          content="Yudai Yamamoto - はじめまして、取り組みについて掲載しております"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <h1 className={styles.title}>
-          Welcome!
-          <Link href="/about">
-            <a>about</a>
-          </Link>
-        </h1>
+      <Layout home={true}>
+        <section className={styles.homeWrapper}>
+          <h2 className={`${styles.homeName} logoName`}>Yudai Yamamoto</h2>
+          <p className={styles.text}>Hello, Welcome!</p>
+        </section>
       </Layout>
     </div>
   );

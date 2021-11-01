@@ -1,12 +1,13 @@
-import React from "react";
-import styles from "./css/Footer.module.scss";
+import styles from "./styles/Footer.module.scss";
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer}`}>
       <div className="inner">
-        <small>&copy; 2021 YUDAI1995</small>
+        <small className={styles.copyRight}>&copy; 2021 YUDAI1995</small>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
