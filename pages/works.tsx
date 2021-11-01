@@ -4,7 +4,7 @@ import { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import ContentLayout from "../components/Layout/ContentLayout";
 import LinkLayout from "../components/Layout/LinkLayout";
-import { Modal } from "../components/Modal";
+import Modal from "../components/Modal";
 import styles from "../styles/works.module.scss";
 
 // 仕様種類
@@ -65,7 +65,7 @@ const works: {
     tecNum: [0, 1, 6, 8, 4, 9, 10, 11],
     link: [
       {
-        pagename: "gitHub",
+        pagename: "GitHub",
         url: "https://github.com/YUDAI1995/budget-management-tool",
         imgSrc: "/images/github-icon01.png",
         linkIcon: "",
@@ -83,6 +83,7 @@ const works: {
     ],
     comment: [
       "現金支出を、より管理しやすいようにしたいという思いがあり、作成したサイトです。",
+      "目的、仕様の考案やAdobe XDを用いてのワイヤーフレームも作成をしました。",
     ],
   },
   {
@@ -233,12 +234,21 @@ const Works = () => {
                 </section>
               </Modal>
             </section>
-            <section className={styles.workSection}>
-              <p>
-                <a href="https://github.com/YUDAI1995" target="_blank">
+            <section className={`${styles.workSection} others`}>
+              <div className={styles.othersContent}>
+                <p className={styles.text}>
                   よろしければGitHubもご覧ください。
-                </a>
-              </p>
+                </p>
+                <p className={`${styles.link} arrowIcon`}>
+                  <LinkLayout
+                    url="https://github.com/YUDAI1995"
+                    name="GitHub"
+                    imgSrc="/images/github-icon01.png"
+                    imgWidth={64}
+                    imgHeight={64}
+                  />
+                </p>
+              </div>
             </section>
           </div>
         </>

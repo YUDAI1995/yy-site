@@ -25,6 +25,9 @@
 
       &:nth-of-type(n + 3) {
         margin-top: 32px;
+        @include mq(md) {
+          margin-top: 40px;
+        }
       }
     }
 
@@ -43,22 +46,7 @@
       box-shadow: 0 0 2px 2px #5f5f5f33;
       overflow: scroll;
       overflow: hidden;
-
-      @include mq(xl) {
-        height: 240px;
-      }
-
-      @include mq(lg) {
-        height: 240px;
-      }
-
-      @include mq(md) {
-        height: 160px;
-      }
-
-      @include mq(sm) {
-        height: 80px;
-      }
+      cursor: pointer;
 
       .img {
         margin: 0;
@@ -69,6 +57,34 @@
         .img {
           transform: scale(1.1);
         }
+      }
+    }
+
+    @include mq(xxl) {
+      .content,
+      .othersContent {
+        height: 264px;
+      }
+    }
+
+    @include mq(lg) {
+      .content,
+      .othersContent {
+        height: 240px;
+      }
+    }
+
+    @include mq(md) {
+      .content,
+      .othersContent {
+        height: 160px;
+      }
+    }
+
+    @include mq(sm) {
+      .content,
+      .othersContent {
+        height: 80px;
       }
     }
 
@@ -149,6 +165,26 @@
 
         .comment {
           margin-top: 10px;
+        }
+      }
+    }
+
+    .othersContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6px 0;
+
+      .text {
+        text-align: center;
+      }
+      .link {
+        text-align: center;
+        width: 320px;
+        margin: 20px auto 0;
+
+        @include mq(md) {
+          width: 100%;
         }
       }
     }

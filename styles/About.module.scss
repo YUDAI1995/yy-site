@@ -4,6 +4,10 @@
   .aboutName {
     font-size: 6rem;
     margin-top: 20px;
+    // @include mq(sm) {
+    //   font-size: 5.2rem;
+    //   text-align: center;
+    // }
   }
   .contentList {
     margin: 20px 0 60px;
@@ -32,7 +36,7 @@
 
       @include mq(sm) {
         .title {
-            font-size: 1.4rem;
+          //font-size: 1.4rem;
           color: #9b9b9b;
           display: block;
           width: 100%;
@@ -49,6 +53,9 @@
   .profile {
     p + p {
       margin-top: 18px;
+      // @include mq(sm) {
+      //     margin-top: 6px;
+      // }
     }
   }
 }

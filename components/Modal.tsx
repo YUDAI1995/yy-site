@@ -6,7 +6,7 @@ interface ModalProps {
   onClose: (modalShow: boolean) => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({
+const Modal: React.FC<ModalProps> = ({
   children,
   isShow,
   onClose,
@@ -42,3 +42,5 @@ export const Modal: React.FC<ModalProps> = ({
     <></>
   );
 };
+
+export default Modal;
